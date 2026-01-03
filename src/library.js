@@ -332,7 +332,7 @@ function InnerSelf(hook) {
             // External use of the AC API force-installs so it just works
             forced: false,
             // NGL this one didn't need to be stateful but I didn't feel like declaring a local so whatevs
-            // Basically AC sets it to true when it does stuff, so Inner Self can inhibit itself
+            // Basically AC sets this to true when it does stuff, so Inner Self can inhibit itself
             event: false
         }
     });
