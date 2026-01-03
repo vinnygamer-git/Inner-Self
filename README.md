@@ -116,7 +116,7 @@ At the very top of the Inner Self `Library` script tab, you'll find optional set
 ### Preparing Scenario NPCs
 
 Prefix regular AID story card titles with the `@` symbol so Inner Self knows which characters should think:
-- **Example card name:** `@Leah`
+- Example card name: `@Leah`
 - Remember to use simple first names here!
 
 Alternatively, you can write a list of important scenario NPCs in the creator control panel, discussed above. Whichever is easier for you. Either way, Inner Self will use the context of your scenario to improve the thought formation process.
@@ -168,7 +168,7 @@ Your task is to transform the character concept into a JSON object
 - [Inner Self](https://play.aidungeon.com/scenario/tsu1WMJXaaAZ/inner-self)
 
 ### Discussion Thread
-- [Inner Self - discussion](https://discordapp.com/channels/903327676884979802/1455232694379221165)
+- [Inner Self main thread](https://discordapp.com/channels/903327676884979802/1455232694379221165)
 - [AI Dungeon official Discord server invite](https://discord.gg/MXNqpSbuZT) (required to access the first link)
 - Please remember this is a personal passion project for me, something I do because I enjoy it, not as a job. Your kindness, patience, and love mean so much to me~ ❤️
 
