@@ -6,7 +6,7 @@ Made by LewdLeah ❤️
 
 ## Overview
 
-**Inner Self** is an AI Dungeon mod that grants memory, goals, secrets, planning, and self-reflection capabilities to the characters living in your story. Simulated agents build and maintain their own minds to learn from experiences, form opinions, and adapt their behavior over time. Inner Self provides the AI with the tools it needs to truly embody characters, allowing them to feel more alive and nuanced over long adventures.
+Inner Self is an AI Dungeon mod that grants memory, goals, secrets, planning, and self-reflection capabilities to the characters living in your story. Simulated agents build and maintain their own minds to learn from experiences, form opinions, and adapt their behavior over time. Inner Self provides the AI with the tools it needs to truly embody characters, allowing them to feel more alive and nuanced over long adventures.
 
 In some ways this is the spiritual successor to [Auto-Cards](https://github.com/LewdLeah/Auto-Cards), which is already included with Inner Self and can be enabled at any time.
 
@@ -16,7 +16,7 @@ In some ways this is the spiritual successor to [Auto-Cards](https://github.com/
 
 | Feature | Description |
 |:--------|:------------|
-| **Compartmentalized Memory** | Each NPC maintains their own private thoughts, separate from every other character |
+| **Compartmentalized Memory** | Each NPC maintains their own private thoughts, separate from other characters |
 | **Self-Organizing Thoughts** | Characters agentically revise, prune, and maintain their own mental state |
 | **Zero Immersion Breaks** | Absolutely NO "please select continue" messages (!!!) |
 | **Real-Time Brain Editor** | View or edit any NPC brain in the associated story card notes |
