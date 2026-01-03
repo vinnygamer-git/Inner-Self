@@ -20,7 +20,7 @@ In some ways this is the spiritual successor to [Auto-Cards](https://github.com/
 
 | Feature | Description |
 |:--------|:------------|
-| **Compartmentalized Memory** | Each NPC maintains their own private thoughts, separate from other characters |
+| **Segmented Memory** | Each NPC maintains their own private thoughts, separate from other characters |
 | **Self-Organizing Thoughts** | Characters agentically revise, prune, and maintain their own mental state |
 | **Zero Immersion Breaks** | Absolutely NO "please select continue" messages (!!!) |
 | **Real-Time Brain Editor** | View or edit any NPC brain in the associated story card notes |
