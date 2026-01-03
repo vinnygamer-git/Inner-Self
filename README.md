@@ -151,7 +151,7 @@ For advanced scenarios, you can even load NPC brains with initial thoughts:
 ## Task instructions:
 Your task is to transform the character concept into a JSON object
 - The object should resemble a flat collection of key-value pairs
-- All values are strings written in the character's inner 1st person PoV
+- All values are strings written from the character's inner 1st person PoV
 - Values should be short single-sentence thoughts that capture core aspects
 - Keys use distinct and descriptive lower snake_case syntax
 - The object represents the character's identity of self
