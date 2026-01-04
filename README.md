@@ -101,7 +101,7 @@ All adventures played from your scenario will now include Inner Self (even exist
 - Read the in-game config card to learn how to easily add NPCs
 - Set response length to 200 tokens if you notice short or empty outputs
 - Enable scripts if you don't see a config card (homepage > settings > gameplay)
-- Protect your mental health because Inner Self is a narrative experience only
+- Protect your mental health: Inner Self is intended to be a narrative experience only
 - Plot components matter because the AI sees them when writing thoughts
 - Different story models also tend to manage brains differently
 - But avoid Atlas and Raven models for this one 😅
