@@ -214,10 +214,13 @@ Your task is to transform the character concept into a JSON object
 <summary><b>(click to expand)</b></summary>
 
 ### 1.0.1
-- Added parameter "Half thought chance after Do/Say/Story" to let players decide whether to halve thought formation chances (by [-Vinny-](https://play.aidungeon.com/profile/-Vinny-))
+- Added config "Half thought chance for Do/Say/Story"
+- Lets players decide if the thought formation chance should be reduced by half during Do/Say/Story turns
+- This reduction was previously mandatory in v1.0.0, to help enforce player agency when using free models
+- Pull request by [-Vinny-](https://play.aidungeon.com/profile/-Vinny-)
 
 ### 1.0.0
-- InnerSelf Released!
+- Inner Self Released!
 
 </details>
 
@@ -225,7 +228,12 @@ Your task is to transform the character concept into a JSON object
 
 ## Contributions
 
-- [-Vinny-](https://play.aidungeon.com/profile/-Vinny-)
+<details>
+<summary><b>(click to expand)</b></summary>
+
+- v1.0.0 → v1.0.1 by [-Vinny-](https://play.aidungeon.com/profile/-Vinny-)
+
+</details>
 
 <p align="center"><i>Thank you so much for your curiosity and support~</i> ❤️</p>
 <p align="center"><b>Inner Self v1.0.1</b> · Made with love by <a href="https://play.aidungeon.com/profile/LewdLeah">LewdLeah</a></p>
