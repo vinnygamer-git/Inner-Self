@@ -221,6 +221,8 @@ Your task is to transform the character concept into a JSON object
 
 </details>
 
+---
+
 ## Contributions
 
 <details>
