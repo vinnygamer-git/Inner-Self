@@ -603,7 +603,7 @@ function InnerSelf(hook) {
                     "chance", S.THOUGHT_FORMATION_CHANCE_PER_TURN,
                     { lower: 0, upper: 100, suffix: "%" }
                 ) },
-                { message: "Halve thought chance for user actions (Do/Say/Story):", ...factory(
+                { message: "Half thought chance after Do/Say/Story:", ...factory(
                     "halve", S.HALVE_THOUGHT_FORMATION_CHANCE_FOR_USER_ACTIONS
                 ) },
                 { message: "Pin this config card near the top:", ...factory(
@@ -1971,7 +1971,7 @@ Follow the format **perfectly**.
                 // Brain is full, prompt for deletion
                 `${prompt.directive[pov]}${self}${text.trim()}${boundary.lower}${prompt.forget[pov]}\n\n`
             ) : ((config.chance / (([
-                // Reduce task chance after Do/Say/Story actions (player is driving) if "Halve thought chance for user actions (Do/Say/Story)" is true.
+                // Reduce task chance after Do/Say/Story actions (player is driving) if "Half thought chance after Do/Say/Story" is true.
                 "do", "say", "story"
             ].includes(getPrevAction()?.type) && config.halve) ? 200 : 100)) < Math.random()) ? (
                 // Sometimes do nothing and emit a side effect on IS.agent
@@ -2170,10 +2170,10 @@ Inner Self ${version} is an AI Dungeon mod that grants memory, goals, secrets, p
 
 > Thought formation chance per turn:
 - How often NPCs attempt to form new thoughts when triggered
-- Can be reduced by half for Do/Say/Story actions (player is driving) when setting "Halve thought chance for user actions (Do/Say/Story)" is true
+- Can be reduced by half for Do/Say/Story actions (player is driving) when setting "Half thought chance after Do/Say/Story" is true
 - (0% to 100%)
 
-> Halve thought chance for user actions (Do/Say/Story):
+> Half thought chance after Do/Say/Story:
 - Reduce thought formation chance by half for Do/Say/Story actions
 - (true or false)
 
