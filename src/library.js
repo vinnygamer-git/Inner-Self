@@ -51,8 +51,8 @@ globalThis.MainSettings = (class MainSettings {
     THOUGHT_FORMATION_CHANCE_PER_TURN: 60
     // (0 to 100)
     ,
-    // Should Inner Self halve the chance of generating a new thought for user actions Do/Say/Story?
-    HALVE_THOUGHT_FORMATION_CHANCE_FOR_USER_ACTIONS: true
+    // Is the thought formation chance reduced by half during Do/Say/Story turns?
+    IS_THOUGHT_CHANCE_HALF_FOR_DO_SAY_STORY: true
     // (true or false)
     ,
     // Is the "Configure Inner Self" story card pinned near the top of the in-game list?
@@ -258,8 +258,8 @@ function InnerSelf(hook) {
     THOUGHT_FORMATION_CHANCE_PER_TURN: 60
     // (0 to 100)
     ,
-    // Should Inner Self halve the chance of generating a new thought for user actions Do/Say/Story?
-    HALVE_THOUGHT_FORMATION_CHANCE_FOR_USER_ACTIONS: true
+    // Is the thought formation chance reduced by half during Do/Say/Story turns?
+    IS_THOUGHT_CHANCE_HALF_FOR_DO_SAY_STORY: true
     // (true or false)
     ,
     // Is the "Configure Inner Self" story card pinned near the top of the in-game list?
@@ -415,7 +415,7 @@ function InnerSelf(hook) {
      * @property {number} distance - Number of previous actions to look back for agent name triggers
      * @property {string} indicator - The visual indicator symbol used to display active brains
      * @property {number} chance - Likelihood of performing a standard thought formation task each turn
-     * @property {boolean} halve - Should Inner Self halve the chance of generating a new thought for user actions Do/Say/Story?
+     * @property {boolean} half - Is the thought formation chance reduced by half during Do/Say/Story turns?
      * @property {boolean} pin - Is the config card pinned near the top of the list?
      * @property {boolean} auto - Is Auto-Cards enabled?
      * @property {boolean} debug - Is debug mode enabled for inline task output visibility?
@@ -453,7 +453,7 @@ function InnerSelf(hook) {
             distance: 5,
             indicator: "🎭",
             chance: 60,
-            halve: true,
+            half: true,
             pin: false,
             auto: false,
             debug: false,
@@ -603,8 +603,8 @@ function InnerSelf(hook) {
                     "chance", S.THOUGHT_FORMATION_CHANCE_PER_TURN,
                     { lower: 0, upper: 100, suffix: "%" }
                 ) },
-                { message: "Half thought chance after Do/Say/Story:", ...factory(
-                    "halve", S.HALVE_THOUGHT_FORMATION_CHANCE_FOR_USER_ACTIONS
+                { message: "Half thought chance for Do/Say/Story:", ...factory(
+                    "half", S.IS_THOUGHT_CHANCE_HALF_FOR_DO_SAY_STORY
                 ) },
                 { message: "Pin this config card near the top:", ...factory(
                     "pin", S.IS_CONFIG_CARD_PINNED_BY_DEFAULT
@@ -1970,10 +1970,10 @@ Follow the format **perfectly**.
             text = full ? (
                 // Brain is full, prompt for deletion
                 `${prompt.directive[pov]}${self}${text.trim()}${boundary.lower}${prompt.forget[pov]}\n\n`
-            ) : ((config.chance / (([
-                // Reduce task chance after Do/Say/Story actions (player is driving) if "Half thought chance after Do/Say/Story" is true.
+            ) : ((config.chance / ((config.half && [
+                // config.half -> reduce task chance after Do/Say/Story actions (player is driving)
                 "do", "say", "story"
-            ].includes(getPrevAction()?.type) && config.halve) ? 200 : 100)) < Math.random()) ? (
+            ].includes(getPrevAction()?.type)) ? 200 : 100)) < Math.random()) ? (
                 // Sometimes do nothing and emit a side effect on IS.agent
                 (IS.agent = " "),
                 `${nondirective()}${self}${text.trim()} `
@@ -2170,11 +2170,10 @@ Inner Self ${version} is an AI Dungeon mod that grants memory, goals, secrets, p
 
 > Thought formation chance per turn:
 - How often NPCs attempt to form new thoughts when triggered
-- Can be reduced by half for Do/Say/Story actions (player is driving) when setting "Half thought chance after Do/Say/Story" is true
 - (0% to 100%)
 
-> Half thought chance after Do/Say/Story:
-- Reduce thought formation chance by half for Do/Say/Story actions
+> Half thought chance for Do/Say/Story:
+- Reduces the thought formation chance by half during Do/Say/Story turns (maintains player agency)
 - (true or false)
 
 > Pin the config card near the top:
