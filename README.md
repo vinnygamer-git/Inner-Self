@@ -214,7 +214,7 @@ Your task is to transform the character concept into a JSON object
 <summary><b>(click to expand)</b></summary>
 
 ### 1.0.1
-- Added parameter "Halve thought chance for user actions (Do/Say/Story)" to let players decide whether to halve thought formation chances (by [-Vinny-](https://play.aidungeon.com/profile/-Vinny-))
+- Added parameter "Half thought chance after Do/Say/Story" to let players decide whether to halve thought formation chances (by [-Vinny-](https://play.aidungeon.com/profile/-Vinny-))
 
 ### 1.0.0
 - InnerSelf Released!
